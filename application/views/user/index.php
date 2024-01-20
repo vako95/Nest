@@ -31,9 +31,9 @@
                     <nav>
                         <ul class="mobile-menu font-heading">
                             <li class="menu-item-has-children">
-                                <a href='/'>Home</a>
+                                <a href='<?php echo base_url('index'); ?>'>Home</a>
                                 <ul class="dropdown">
-                                    <li><a href='/'>Home 1</a></li>
+                                    <li><a href='<?php echo base_url('index'); ?>'>Home 1</a></li>
                                     <li><a href='/index-2'>Home 2</a></li>
                                     <li><a href='/index-3'>Home 3</a></li>
                                     <li><a href='/index-4'>Home 4</a></li>
@@ -42,25 +42,25 @@
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href='/shop-grid-right'>shop</a>
+                                <a href='<?php echo base_url('shop'); ?>'>shop</a>
                                 <ul class="dropdown">
-                                    <li><a href='/shop-grid-right'>Shop Grid – Right Sidebar</a></li>
+                                    <li><a href='<?php echo base_url('shop'); ?>'>Shop Grid – Right Sidebar</a></li>
                                     <li><a href='/shop-grid-left'>Shop Grid – Left Sidebar</a></li>
                                     <li><a href='/shop-list-right'>Shop List – Right Sidebar</a></li>
                                     <li><a href='/shop-list-left'>Shop List – Left Sidebar</a></li>
                                     <li><a href='/shop-fullwidth'>Shop - Wide</a></li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">Single Product</a>
+                                        <a href="<?php echo base_url('shop_single'); ?>">Single Product</a>
                                         <ul class="dropdown">
-                                            <li><a href='/shop-product-right'>Product – Right Sidebar</a></li>
+                                            <li><a href='<?php echo base_url('shop_single'); ?>'>Product – Right Sidebar</a></li>
                                             <li><a href='/shop-product-left'>Product – Left Sidebar</a></li>
                                             <li><a href='/shop-product-full'>Product – No sidebar</a></li>
                                             <li><a href='/shop-product-vendor'>Product – Vendor Infor</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href='/shop-filter'>Shop – Filter</a></li>
-                                    <li><a href='/shop-wishlist'>Shop – Wishlist</a></li>
-                                    <li><a href='/shop-cart'>Shop – Cart</a></li>
+                                    <li><a href='<?php echo base_url('shop_navbar/shop_filter'); ?>'>Shop – Filter</a></li>
+                                    <li><a href='<?php echo base_url('shop_navbar/shop_wishlist'); ?>'>Shop – Wishlist</a></li>
+                                    <li><a href='<?php echo base_url('shop_navbar/shop_cart'); ?>'>Shop – Cart</a></li>
                                     <li><a href='/shop-checkout'>Shop – Checkout</a></li>
                                     <li><a href='/shop-compare'>Shop – Compare</a></li>
                                     <li class="menu-item-has-children">
