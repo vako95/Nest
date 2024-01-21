@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+                                  //USER CONTROLLER START
 $route['home'] = "UserCon/index";
 $route['deals'] = "UserCon/deals";
 $route['about'] = "UserCon/about";
@@ -56,7 +56,31 @@ $route['purchase'] = "UserCon/purchase";
 $route['privacy_policy'] = "UserCon/privacy_policy";
 $route['terms'] = "UserCon/terms";
 
-// NavPAGES purchase
+// NavPAGES purchase                 
+                                 //USER CONTROLLER END
+
+//ADMIN CONTROLLER START ADMIN CONTROLLER START ADMIN CONTROLLER START
+
+$route['admin_dashboard'] = "AdminCon/dashboard";                                
+$route['admin_product'] = "AdminCon/product_list";                                
+$route['admin_categories'] = "AdminCon/product_categories";
+
+//ORDERS
+$route['admin_order'] = "AdminCon/order_list"; 
+$route['admin_order_detail'] = "AdminCon/order_detail"; 
+
+//SELLERS
+$route['admin_sellers'] = "AdminCon/sellers_list"; 
+$route['admin_sellers_profile'] = "AdminCon/sellers_profile";
+
+    //CREAT PRODUCT
+$route['admin_creat_product'] = "AdminCon/creat_product";
+
+
+
+
+                            //ADMIN CONTROLLER END
+
 
 
 
