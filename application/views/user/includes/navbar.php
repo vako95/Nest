@@ -215,11 +215,13 @@
                         </div>
                     </div>
                     <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
-                        <nav>
+                       <?php $segment = $this->uri->segment(1);?>
+                    <nav>
                             <ul>
-                                <li class="hot-deals"><img src="<?php echo base_url('public/user/'); ?>assets/imgs/theme/icons/icon-hot.svg" alt="hot deals" /><a href='<?php echo base_url('deals'); ?>'>Deals</a></li>
+                                <li class="hot-deals"><img src="<?php echo base_url('public/user/'); ?>assets/imgs/theme/icons/icon-hot.svg" alt="hot deals" />
+                                <a class="<?php if($segment == 'deals' || $segment == ''){ ?> active <?php } ?>" href='<?php echo base_url('deals'); ?>'>Deals</a></li>
                                 <li>
-                                    <a class='active' href='<?php echo base_url('home'); ?>'>Home<i class="fi-rs-angle-down"></i></a>
+                                    <a class='<?php if($segment == 'home' ){ ?> active <?php } ?>' href='<?php echo base_url('home'); ?>'>Home<i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href='<?php echo base_url('home'); ?>'>Home 1</a></li>
                                         <li><a href='<?php echo base_url('home'); ?>'>Home 2</a></li>
@@ -229,17 +231,15 @@
                                         <li><a href='/index-6'>Home 6</a></li>
                                     </ul>
                                 </li>
+                              
                                 <li>
-                                    <a href='<?php echo base_url('about'); ?>'>About</a>
-                                </li>
-                                <li>
-                                    <a href='<?php echo base_url('shop'); ?>'>Shop <i class="fi-rs-angle-down"></i></a>
+                                    <a class="<?php if($segment == 'shop'){ ?> active <?php } ?>" href='<?php echo base_url('shop'); ?>'>Shop <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href='<?php echo base_url('shop'); ?>'>Shop Grid – Right Sidebar</a></li>
+                                        <li><a class="<?php if($segment == 'shop'){ ?> active <?php } ?>" href='<?php echo base_url('shop'); ?>'>Shop Grid – Right Sidebar</a></li>
                                         <li><a href='/shop-list-right'>Shop List – Right Sidebar</a></li>
                                         <li><a href='/shop-fullwidth'>Shop - Wide</a></li>
                                         <li>
-                                            <a href="<?php echo base_url('shop_single'); ?>">Single Product <i class="fi-rs-angle-right"></i></a>
+                                            <a class="<?php if($segment == 'shop_single'){ ?> active <?php } ?>" href="<?php echo base_url('shop_single'); ?>">Single Product <i class="fi-rs-angle-right"></i></a>
                                             <ul class="level-menu">
                                                 <li><a href='<?php echo base_url('shop_single'); ?>'>Product – Right Sidebar</a></li>
                                                 <li><a href='<?php echo base_url('shop_single'); ?>'>Product – Vendor Info</a></li>
@@ -261,7 +261,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url('vendors_dashboard'); ?>">Vendors <i class="fi-rs-angle-down"></i></a>
+                                    <a class="<?php if($segment == 'vendors_dashboard'){ ?> active <?php } ?>" href="<?php echo base_url('vendors_dashboard'); ?>">Vendors <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href='<?php echo base_url('vendors_grid'); ?>'>Vendors Grid</a></li>
                                         <li><a href='<?php echo base_url('vendors_list'); ?>'>Vendors List</a></li>
@@ -270,7 +270,7 @@
                                     </ul>
                                 </li>
                                 <li class="position-static">
-                                    <a href="<?php echo base_url('mega_fruit'); ?>">Mega menu <i class="fi-rs-angle-down"></i></a>
+                                    <a class="<?php if($segment == 'mega_fruit'){ ?> active <?php } ?>" href="<?php echo base_url('mega_fruit'); ?>">Mega menu <i class="fi-rs-angle-down"></i></a>
                                     <ul class="mega-menu">
                                         <li class="sub-mega-menu sub-mega-menu-width-22">
                                             <a class="menu-title" href="<?php echo base_url('mega_fruit'); ?>">Fruit & Vegetables</a>
@@ -332,7 +332,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href='<?php echo base_url('blog'); ?>'>Blog <i class="fi-rs-angle-down"></i></a>
+                                    <a class="<?php if($segment == 'blog'){ ?> active <?php } ?>" href='<?php echo base_url('blog'); ?>'>Blog <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href='<?php echo base_url('blog'); ?>'>Blog Category Grid</a></li>
                                         <li><a href='<?php echo base_url('blog'); ?>'>Blog Category List</a></li>
@@ -349,13 +349,13 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
+                                    <a class="<?php if($segment == 'home'){ ?> active <?php } ?>" href="<?php echo base_url('home'); ?>">Pages <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href='<?php echo base_url('about'); ?>'>About Us</a></li>
                                         <li><a href='<?php echo base_url('contact'); ?>'>Contact</a></li>
                                         <li><a href='<?php echo base_url('account'); ?>'>My Account</a></li>
                                         <li><a href='<?php echo base_url('login'); ?>'>Login</a></li>
-                                        <li><a href='<?php echo base_url('register'); ?>'>Register</a></li>
+                                        <li><a href='<?php echo base_url('page_register'); ?>'>Register</a></li>
                                         <li><a href='<?php echo base_url('forgot_password'); ?>'>Forgot password</a></li>
                                         <li><a href='<?php echo base_url('reset_password'); ?>'>Reset password</a></li>
                                         <li><a href='<?php echo base_url('purchase'); ?>'>Purchase Guide</a></li>
@@ -365,7 +365,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href='<?php echo base_url('contact'); ?>'>Contact</a>
+                                    <a class="<?php if($segment == 'contact'){ ?> active <?php } ?>" href='<?php echo base_url('contact'); ?>'>Contact</a>
                                 </li>
                             </ul>
                         </nav>

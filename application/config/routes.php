@@ -25,10 +25,7 @@ $route['vendors_list'] = "UserCon/vendors_list";
 $route['vendors_details'] = "UserCon/vendors_details";
 $route['vendors_dashboard'] = "UserCon/vendors_dashboard";
 $route['vendors_guide'] = "UserCon/vendors_guide";
-
 // Vendors Nav Menu END
-
-
 
 // Mega Nav Menu Start
 $route['mega_fruit'] = "UserCon/mega_fruit";
@@ -55,7 +52,6 @@ $route['login'] = "UserCon/login";
 $route['purchase'] = "UserCon/purchase";
 $route['privacy_policy'] = "UserCon/privacy_policy";
 $route['terms'] = "UserCon/terms";
-
 // NavPAGES purchase                 
                                  //USER CONTROLLER END
 
@@ -75,6 +71,23 @@ $route['admin_sellers_profile'] = "AdminCon/sellers_profile";
 
     //CREAT PRODUCT
 $route['admin_creat_product'] = "AdminCon/creat_product";
+
+//Others FROM NAVBAR LIST
+$route['admin_transactions'] = "AdminCon/transactions";
+
+//LOGIN PAGE
+$route['admin_login'] = "AdminCon/user_login";
+$route['admin_registr'] = "AdminCon/user_registr";
+$route['admin_not_found'] = "AdminCon/not_found";
+
+//OTHERS PAGE
+$route['admin_reviews'] = "AdminCon/reviews";
+$route['admin_brands'] = "AdminCon/brands";
+$route['admin_profile_setting'] = "AdminCon/profile_setting";
+$route['admin_site_setting'] = "AdminCon/site_setting";
+$route['admin_starter_page'] = "AdminCon/starter_page";
+
+
 
 
 
