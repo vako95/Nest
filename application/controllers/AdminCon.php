@@ -36,6 +36,67 @@
 
         $this->load->view('admin/NavbarList/products_creat/creat_product');
     }
+    public function creat_product_act(){
+
+        $product_name = $this->input->post('product_name');
+        $description = $this->input->post('description');
+        $regular_price = $this->input->post('regular_price');
+        $promotional_price = $this->input->post('promotional_price');
+
+        $currency = $this->input->post('currency');
+        $make_template = $this->input->post('make_template');
+        $width = $this->input->post('width');
+        $height = $this->input->post('height');
+        $weight = $this->input->post('weight');
+        $shipping_fees = $this->input->post('shipping_fees');
+        $category = $this->input->post('category');
+        $sub_category = $this->input->post('sub_category');
+        $tax_rate = $this->input->post('tax_rate');
+
+
+        if(!empty($product_name) && 
+        !empty($description) && 
+        !empty($regular_price) && 
+        !empty($promotional_price) && 
+  
+        !empty($currency) && 
+        !empty($width) &&
+        !empty($height) &&
+        !empty($weight) &&
+        !empty($shipping_fees) &&
+        !empty($category) &&
+        !empty($shipping_fees) &&
+        !empty($sub_category) &&
+        !empty($make_template)  &&
+        !empty($tax_rate) 
+        
+        )
+        {
+
+         $data = [
+        $p_product_name =>  $product_name,
+        $p_description  =>  $description ,       
+        $p_regular_price =>  $regular_price ,       
+        $p_promotional_price =>  $promotional_price ,       
+        $p_currency =>  $currency ,       
+        $p_make_template =>  $make_template ,       
+        $p_width =>  $width ,       
+        $p_height =>  $height ,       
+        $p_weight =>  $weight ,       
+        $p_shipping_fees =>  $shipping_fees ,       
+        $p_category =>  $category ,       
+        $p_sub_category =>  $sub_category ,       
+        $p_tax_rate =>  $tax_rate        
+    
+       ];
+       print_r('<pre>');
+       print_r($data);
+
+        } else{
+            redirect($_SERVER['HTTP_REFEVER']);
+        }
+
+    }
     public function transactions(){
 
         $this->load->view('admin/NavbarList/transactions/transactions');

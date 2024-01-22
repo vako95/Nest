@@ -19,33 +19,33 @@
                     <h4>Basic</h4>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="<?php echo base_url('creat_product_act'); ?>" method="post" enctype="multipart/form-data">
                         <div class="mb-4">
                             <label for="product_name" class="form-label">Product title</label>
-                            <input type="text" placeholder="Type here" class="form-control" id="product_name" />
+                            <input name="product_name" type="text" placeholder="Type here" class="form-control" id="product_name" />
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Full description</label>
-                            <textarea placeholder="Type here" class="form-control" rows="4"></textarea>
+                            <label for="description" class="form-label">Full description</label>
+                            <textarea name="description" placeholder="Type here" id="description" class="form-control" rows="4"></textarea>
                         </div>
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="mb-4">
-                                    <label class="form-label">Regular price</label>
+                                    <label for="regular_price" class="form-label">Regular price</label>
                                     <div class="row gx-2">
-                                        <input placeholder="$" type="text" class="form-control" />
+                                        <input name="regular_price" id="regular_price" placeholder="$" type="text" class="form-control" />
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="mb-4">
-                                    <label class="form-label">Promotional price</label>
-                                    <input placeholder="$" type="text" class="form-control" />
+                                    <label for="promotional_price" class="form-label">Promotional price</label>
+                                    <input name="promotional_price" id="promotional_price" placeholder="$" type="text" class="form-control" />
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <label class="form-label">Currency</label>
-                                <select class="form-select">
+                                <label for="currency" class="form-label">Currency</label>
+                                <select name="currency" id="currency" class="form-select">
                                     <option>USD</option>
                                     <option>EUR</option>
                                     <option>RUBL</option>
@@ -53,16 +53,18 @@
                             </div>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label">Tax rate</label>
-                            <input type="text" placeholder="%" class="form-control" id="product_name" />
+                            <label for="tax_rate" class="form-label">Tax rate</label>
+                            <input name="tax_rate" id="tax_rate" type="text" placeholder="%" class="form-control" id="product_name" />
                         </div>
-                        <label class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" value="" />
+                        <label for="make_template" class="form-check mb-4">
+                            <input name="make_template" id="make_template" class="form-check-input" type="checkbox" value="" />
                             <span class="form-check-label"> Make a template </span>
                         </label>
                     </form>
                 </div>
             </div>
+
+
             <!-- card end// -->
             <div class="card mb-4">
                 <div class="card-header">
@@ -104,7 +106,7 @@
                 </div>
                 <div class="card-body">
                     <div class="input-upload">
-                        <img src="<?php echo base_URL('public/admin/') ?>assets/imgs/theme/upload.svg" alt="" />
+                        <img src="assets/imgs/theme/upload.svg" alt="" />
                         <input class="form-control" type="file" />
                     </div>
                 </div>

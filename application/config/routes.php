@@ -71,6 +71,7 @@ $route['admin_sellers_profile'] = "AdminCon/sellers_profile";
 
     //CREAT PRODUCT
 $route['admin_creat_product'] = "AdminCon/creat_product";
+$route['admin_creat_product_act'] = "AdminCon/creat_product_act";
 
 //Others FROM NAVBAR LIST
 $route['admin_transactions'] = "AdminCon/transactions";
