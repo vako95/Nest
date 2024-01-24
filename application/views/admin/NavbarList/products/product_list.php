@@ -41,145 +41,30 @@
         <!-- card-header end// -->
         <div class="card-body">
             <div class="row gx-3 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5">
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/1.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Haagen-Dazs Caramel Cone Ice</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
+                <?php foreach ($get_product as $get_product_key) { ?>
+                    <div class="col">
+                        <div class="card card-product-grid">
+                            <?php if ($get_product_key['p_img']) { ?>
+                                <a href="#" style="object-fit: cover; width:100%; height:180px;" class="img-wrap"> <img src="<?php echo base_url('uploads/Nest/' . $get_product_key['p_img']); ?>" alt="Product" /> </a>
+                            <?php } else {  ?>
+                                <a href="#" style="object-fit: cover; width:100%; height:180px;" class="img-wrap"> <img src="<?php echo base_url('public/admin/') ?>assets/imgs/no-product/free-vector.jpg" alt="Product" /> </a>
+                            <?php } ?>
+                            <div class="info-wrap">
+                                <a href="#" class="title text-truncate"><?php echo $get_product_key['p_product_title']; ?></a>
+                                <div class="price mb-2"><?php echo $get_product_key['p_regular_price']; ?></div>
+                                <!-- price.// -->
+                                <a href="<?php echo base_url('admin/edit/product/'. $get_product_key['p_id']);?>" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit fa-md"></i> Edit </a>
+                                <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever fa-md"></i> Delete </a>
+                            </div>
                         </div>
+
                     </div>
-                    <!-- card-product  end// -->
-                </div>
+                <?php  } ?>
+
                 <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/2.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Seeds of Change Organic Quinoa</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
+
                 <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/3.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">All Natural Italian-Style</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
-                <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/4.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Boomchick apop Sweet & Salty</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
-                <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/5.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Haagen-Dazs Caramel Cone Ice</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
-                <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/6.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Haagen-Dazs Caramel Cone Ice</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
-                <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/7.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Haagen-Dazs Caramel Cone Ice</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
-                <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/8.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Apple Airpods CB-133</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
-                <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/9.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Apple Airpods CB-133</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
-                <!-- col.// -->
-                <div class="col">
-                    <div class="card card-product-grid">
-                        <a href="#" class="img-wrap"> <img src="<?php echo base_url('public/admin/'); ?>assets/imgs/items/10.jpg" alt="Product" /> </a>
-                        <div class="info-wrap">
-                            <a href="#" class="title text-truncate">Apple Airpods CB-133</a>
-                            <div class="price mb-2">$179.00</div>
-                            <!-- price.// -->
-                            <a href="#" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                            <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
-                        </div>
-                    </div>
-                    <!-- card-product  end// -->
-                </div>
+
                 <!-- col.// -->
             </div>
             <!-- row.// -->

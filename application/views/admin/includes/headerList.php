@@ -22,8 +22,10 @@
                         <span class="text">Products</span>
                     </a>
                     <div class="submenu">
+                        <a href='<?php echo base_url('admin/creat/product'); ?>'>Product Creat</a>
                         <a href='<?php echo base_url('admin_product'); ?>'>Product List</a>
                        <a href='<?php echo base_url('admin_categories'); ?>'>Categories</a>
+                      
                     </div>
                 </li>
                 <li class="menu-item has-submenu">

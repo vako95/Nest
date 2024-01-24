@@ -4,11 +4,6 @@
 
 <section class="content-main">
     <div class="row">
-    <div class="col-9">
-                 
-
-    
-                    </div>
         <form action="<?php echo base_url('admin_creat_product_act'); ?>" method="post" enctype="multipart/form-data">
             <div class="col-lg-6">
                 <div class="card mb-4">
@@ -59,8 +54,6 @@
 
                     </div>
                 </div>
-
-
                 <!-- card end// -->
                 <div class="card mb-4">
                     <div class="card-header">
