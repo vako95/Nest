@@ -23,7 +23,7 @@
                     </a>
                     <div class="submenu">
                         <a href='<?php echo base_url('admin/creat/product'); ?>'>Product Creat</a>
-                        <a href='<?php echo base_url('admin_product'); ?>'>Product List</a>
+                        <a href='<?php echo base_url('admin/product/list'); ?>'>Product List</a>
                        <a href='<?php echo base_url('admin_categories'); ?>'>Categories</a>
                       
                     </div>
@@ -55,7 +55,7 @@
                         <span class="text">Add product</span>
                     </a>
                     <div class="submenu">
-                        <a href='<?php echo base_url('admin_creat_product'); ?>'>Add product </a>
+                        <a href='<?php echo base_url('admin/creat/product'); ?>'>Add product </a>
                       
                     </div>
                 </li>

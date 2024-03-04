@@ -8,6 +8,12 @@ $route['contact'] = "UserCon/contact";
 
 // Shop Nav Menu Start
 $route['shop'] = "UserCon/shop";
+$route['shop_murad'] = "UserCon/shop_murad";
+
+$route["shop/categories/(:any)"] = "UserCon/categories/$1";
+$route["shop/murad/(:any)"] = "UserCon/murad_slug/$1";
+
+
 $route['shop_wide'] = "UserCon/shop_wide";
 $route['shop_single'] = "UserCon/shop_single";
 $route['shop_filter'] = "UserCon/shop_filter";
@@ -57,10 +63,19 @@ $route['terms'] = "UserCon/terms";
 
 //ADMIN CONTROLLER START ADMIN CONTROLLER START ADMIN CONTROLLER START
 
-$route['admin_dashboard'] = "AdminCon/dashboard";                                
-$route['admin_product'] = "AdminCon/product_list";                                
+$route['admin/dashboard'] = "AdminCon/dashboard";                                
+$route['admin/product/list'] = "AdminCon/product_list";                                
 $route['admin_categories'] = "AdminCon/product_categories";
+$route['admin/product/categories/act'] = "AdminCon/product_categories_act";
 
+$route['admin/sub/categories'] = "AdminCon/sub_categories";
+$route['admin/sub/categories/act'] = "AdminCon/sub_categories_act";
+
+//TESTTTTT
+$route['admin/categories/test'] = "AdminCon/product_categories_test";
+$route['admin/product/categories/act/test'] = "AdminCon/product_categories_act_test";
+
+//TESTTTTT
 //ORDERS
 $route['admin_order'] = "AdminCon/order_list"; 
 $route['admin_order_detail'] = "AdminCon/order_detail"; 
@@ -74,6 +89,8 @@ $route['admin/creat/product'] = "AdminCon/creat_product";
 $route['admin_creat_product_act'] = "AdminCon/creat_product_act";
 // update
 $route['admin/edit/product/(.*)'] = "AdminCon/edit_product/$1";
+$route['admin/edit/product/act/(:any)'] = "AdminCon/edit_product_act/$1";
+$route['admin/delete/product/(.*)'] = "AdminCon/delete_product/$1";
 
 //Others FROM NAVBAR LIST
 $route['admin_transactions'] = "AdminCon/transactions";

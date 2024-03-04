@@ -53,8 +53,8 @@
                                 <a href="#" class="title text-truncate"><?php echo $get_product_key['p_product_title']; ?></a>
                                 <div class="price mb-2"><?php echo $get_product_key['p_regular_price']; ?></div>
                                 <!-- price.// -->
-                                <a href="<?php echo base_url('admin/edit/product/'. $get_product_key['p_id']);?>" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit fa-md"></i> Edit </a>
-                                <a href="#" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever fa-md"></i> Delete </a>
+                                <a href="<?php echo base_url('admin/edit/product/'. $get_product_key['p_id']); ?>" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit fa-md"></i> Edit </a>
+                                <a href="<?php echo base_url('admin/delete/product/'. $get_product_key['p_id']); ?>"class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever fa-md"></i> Delete </a>
                             </div>
                         </div>
 
