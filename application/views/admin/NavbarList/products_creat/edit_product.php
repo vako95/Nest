@@ -5,6 +5,9 @@
 <section class="content-main">
     <div class="row">
         <form action="<?php echo base_url('admin_creat_product_act'); ?>" method="post" enctype="multipart/form-data">
+        <div class="row">
+
+        
             <div class="col-lg-6">
                 <div class="card mb-4">
                     <div class="card-header">

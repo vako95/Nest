@@ -138,6 +138,7 @@ class AdminCon extends CI_Controller
                     'p_shipping_fees'      =>  $shipping_fees,
                     'p_category'           =>  $category,
                     'p_sub_category'       =>  $sub_category,
+                    'p_tags'               =>  $tags,
 
 
                 ];
